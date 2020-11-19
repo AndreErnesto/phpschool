@@ -676,7 +676,7 @@ T   he special resource type is not an actual data type.
 <form method = "post">   
 Base: <input type="number" name="base">   
 <br><br>  
-Height: <input type="number" name="altura"><br>   
+Altura: <input type="number" name="altura"><br>   
 <input type = "submit" name = "submit" value="Calculate">   
 </form>   
  
@@ -684,8 +684,8 @@ Height: <input type="number" name="altura"><br>
 if(isset($_POST['submit']))  
     {   
 $base = $_POST['base'];   
-$height = $_POST['altura'];   
-$area = ($base*$height) / 2;   
+$altura = $_POST['altura'];   
+$area = ($base*$altura) / 2;   
 echo "A área do triângulo é: $area";   
 }   
 ?>  
@@ -706,9 +706,8 @@ if(isset($_POST['submit']))
     $pi = 3.14;
     $area1= $pi * ($raio * $raio);
     echo "Área do círculo é: $area1";
-}
-    
-?>
+}?>
+<br>
 
 
 </body>
