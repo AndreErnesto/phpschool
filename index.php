@@ -15,8 +15,8 @@
 <h1>Part II - Learning the language</h1>
 
 <ul>
-    <li><a href="php.c1_PHPLanguageBasics">PHP Language Basics</a></li>
-    <li><a href="php.c2_PHPDecisionsAndLoops">Decisions and Loops</a></li>
+    <li><a href="php/c1_PHPLanguageBasics.php">PHP Language Basics</a></li>
+    <li><a href="php/c2_PHPDecisionsAndLoops.php">Decisions and Loops</a></li>
     <li><a href="#">Strings</a></li>
     <li><a href="#">Arrays</a></li>
     <li><a href="#">Arrays </a></li>
