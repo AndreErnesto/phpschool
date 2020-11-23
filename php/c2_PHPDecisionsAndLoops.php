@@ -160,6 +160,29 @@
     }
     ?>
     
+<!-- Exercício 1-->
+<br> Exercício 1
+
+<form method = "post">   
+Idade: <input type="number" name="idade">  
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<?php
+if(isset($_POST['submit']))
+{
+    $idade = $_POST['idade'];
+
+    if ($t < "10") {
+        echo "Have a good morning!";
+    } 
+    elseif ($idade < "20") {
+        echo "Have a good day!";
+    } 
+    else {
+        echo "Have a good night!";
+    }
+    echo "<br>";
+}
 
 
 

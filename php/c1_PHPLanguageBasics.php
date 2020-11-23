@@ -672,12 +672,12 @@ T   he special resource type is not an actual data type.
 <!-- Exercício 1 -->
 
 
-  
+<br> Exercício 1
 <form method = "post">   
 Base: <input type="number" name="base">   
 <br><br>  
 Altura: <input type="number" name="altura"><br>   
-<input type = "submit" name = "submit" value="Calculate">   
+<input type = "submit" name = "submit" value="Calcular">   
 </form>   
  
 <?php   
@@ -693,10 +693,10 @@ echo "A área do triângulo é: $area";
  
 <!-- Exercicio 2 -->
  
-
+<br> Exercício 2
 <form method = "post">   
 Raio: <input type="number" name="raio">   
-<input type = "submit" name = "submit" value="Calculate">   
+<input type = "submit" name = "submit" value="Calcular">   
 </form>    
 
 <?php
@@ -708,6 +708,61 @@ if(isset($_POST['submit']))
     echo "Área do círculo é: $area1";
 }?>
 <br>
+
+<!--Exercício 3 -->
+<br> Exercício 3
+<form method = "post">   
+Grau Fahrenheint: <input type="number" name="grau">   
+<input type = "submit" name = "submit" value="Calcular">   
+</form>    
+
+<?php
+if(isset($_POST['submit']))  
+{
+    $grau=$_POST['grau'];
+    ($Celsius= ($grau-32) * (5/9));
+    echo "Os graus em Celsius é: $Celsius";
+}?>
+<br>
+
+<!--Exercício 4 -->
+<br> Exercício 4
+<form method = "post">   
+Preço: <input type="number" name="preco">   
+<br><br>  
+Desconto: <input type="decimal" name="desconto"><br>   
+<input type = "submit" name = "submit" value="Calcular">   
+</form>   
+<?php
+if(isset($_POST['submit']))
+{
+    $preco = $_POST['preco'];
+    $desconto = $_POST['desconto'];
+    $preco =$preco - ($preco * ($desconto/100));
+    echo"O desconto foi de ",$desconto ,"% dando o preço final de: ",$preco;
+}
+?>
+<br>
+
+<!-- Exercício 5-->
+<br> Exercício 5
+
+<form method = "post">   
+Segundos: <input type="number" name="segundos">  
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<?php
+if(isset($_POST['submit']))
+{
+$Resultado = $_POST['segundos'];
+$hours = floor($Resultado / 3600);
+$minutes = floor(($Resultado / 60) % 60);
+$seconds = $Resultado % 60;
+}
+echo $Resultado,"s = " ,$hours, "h + ", $minutes, "m + " ,$seconds, "s";
+
+?>
+
 
 
 </body>
