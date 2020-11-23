@@ -17,9 +17,9 @@
 <ul>
     <li><a href="php/c1_PHPLanguageBasics.php">PHP Language Basics</a></li>
     <li><a href="php/c2_PHPDecisionsAndLoops.php">Decisions and Loops</a></li>
-    <li><a href="#">Strings</a></li>
-    <li><a href="#">Arrays</a></li>
-    <li><a href="#">Arrays </a></li>
+    <li><a href="php/c3_PHPFunctions.php">Strings</a></li>
+    <li><a href="php/c4_PHPArrays.php">Arrays</a></li>
+    <li><a href="php/c5_PHPSuperglobals.php">Arrays </a></li>
     <li><a href="#">Functions</a></li>
     <li><a href="#">Objects</a></li>
 </ul>
