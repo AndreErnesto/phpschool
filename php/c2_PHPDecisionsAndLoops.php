@@ -167,34 +167,36 @@
 Idade: <input type="number" name="idade">  
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
+<br>
 <?php
 if(isset($_POST['submit']))
 {
     $idade = $_POST['idade'];
 
-    if ($t < "10") {
-        echo "Have a good morning!";
+    if ($idade > "0" && $idade <= "6" ) {
+        echo "Golfinhos";
     } 
-    elseif ($idade < "20") {
-        echo "Have a good day!";
+    elseif ($idade >= "7" && $idade <= "10") {
+        echo "Infantil";
+    }
+    elseif ($idade >= "11" && $idade <= "13") {
+        echo "Juvenil";
+    } 
+    elseif ($idade >= "14" && $idade <= "17") {
+        echo "Tubarões";
+    } 
+    elseif ($idade >= "18") {
+        echo "Cota";
     } 
     else {
-        echo "Have a good night!";
+        echo "Idade Inválida";
     }
-    echo "<br>";
 }
+?>
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- Exercício 2-->
+<br> Exercício 2
 
 
 </body>
