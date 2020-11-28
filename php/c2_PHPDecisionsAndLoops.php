@@ -200,11 +200,11 @@ if(isset($_POST['submit']))
 <br>
 
 <form method = "post">   
-Nota 1: <input type="decimal" name="nota1">  
+Nota 1: <input type="number" name="nota1">  
 <br><br>
-Nota 2: <input type="decimal" name="nota2">  
+Nota 2: <input type="number" name="nota2">  
 <br><br>
-Nota 3: <input type="decimal" name="nota3">  
+Nota 3: <input type="number" name="nota3">  
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
 <br>
@@ -236,6 +236,33 @@ else{
     }
 }
 ?>
+
+<br>
+
+<!-- Exercício 3-->
+<br> Exercício 3
+<br>
+
+<form method = "post">   
+Número 1: <input type="number" name="numero1">  
+<br><br>
+Número 2: <input type="number" name="numero2">  
+<br><br>
+Número 3: <input type="number" name="numero3">  
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<br>
+<?php
+if(isset($_POST['submit']))
+{
+    $numero1 = $_POST['numero1'];
+    $numero2 = $_POST['numero2'];
+    $numero3 = $_POST['numero3'];
+echo(max($numero1,$numero2,$numero3));
+}
+?>
+
+
 
 </body>
 </html>
