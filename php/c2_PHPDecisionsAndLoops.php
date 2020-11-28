@@ -197,9 +197,40 @@ if(isset($_POST['submit']))
 
 <!-- Exercício 2-->
 <br> Exercício 2
+<br>
 
+<form method = "post">   
+Nota 1: <input type="number" name="nota1">  
+<br><br>
+Nota 2: <input type="number" name="nota2">  
+<br><br>
+Nota 3: <input type="number" name="nota3">  
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<br>
+<?php
+$peso1 = 3;
+$peso2=  4;
+$peso3=  5;
+if(isset($_POST['submit'])){
+    $nota1 = $_POST['nota1'];
+    $nota2 = $_POST['nota2'];
+    $nota3 = $_POST['nota3'];
+    $mediaP = (($nota1*$peso1) + ($nota2*$peso2) + ($nota3*$peso3)) / ($peso1+$peso2+$peso3);
+    if(isset($_POST['submit']))
+{
+    if ($mediaP > "0" && $idade < "7.5" ) {
+        echo "Reprovado";
+    } 
+    elseif ($idade >= "7.5" && $idade < "9.5") {
+        echo "Admitido";
+    }
+    elseif ($idade >= "9.5") {
+        echo "Dispensado";
+}
 
-
+?>
+<br>
 
 
 </body>
