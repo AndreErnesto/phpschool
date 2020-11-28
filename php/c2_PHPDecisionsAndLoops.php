@@ -244,11 +244,11 @@ else{
 <br>
 
 <form method = "post">   
-Número 1: <input type="number" name="numero1">  
+Número 1: <input type="number" name="num1">  
 <br><br>
-Número 2: <input type="number" name="numero2">  
+Número 2: <input type="number" name="num2">  
 <br><br>
-Número 3: <input type="number" name="numero3">  
+Número 3: <input type="number" name="num3">  
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
 <br>
@@ -256,18 +256,21 @@ Número 3: <input type="number" name="numero3">
 
 <?php
 
-$num1 = $_POST['num1'];
-$num2 = $_POST['num2'];
-$num3 = $_POST['num3'];
-$highest_number = max($num1, $num2, $num3);
-
 if(isset($_POST['submit']))
 {
-echo $highest_number;
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $num3 = $_POST['num3'];
+    $maior = max($num1, $num2, $num3);
+
+echo $maior;
 }
 ?>
+<br>
 
-
+<!-- Exercício 4-->
+<br> Exercício 4
+<br>
 
 </body>
 </html>
