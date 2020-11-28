@@ -200,11 +200,11 @@ if(isset($_POST['submit']))
 <br>
 
 <form method = "post">   
-Nota 1: <input type="number" name="nota1">  
+Nota 1: <input type="decimal" name="nota1">  
 <br><br>
-Nota 2: <input type="number" name="nota2">  
+Nota 2: <input type="decimal" name="nota2">  
 <br><br>
-Nota 3: <input type="number" name="nota3">  
+Nota 3: <input type="decimal" name="nota3">  
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
 <br>
@@ -214,7 +214,7 @@ Nota 3: <input type="number" name="nota3">
 $peso1 = 3;
 $peso2=  4;
 $peso3=  5;
-   
+
     if(isset($_POST['submit']))
 {
     $nota1 = $_POST['nota1'];
@@ -222,13 +222,13 @@ $peso3=  5;
     $nota3 = $_POST['nota3'];
     $mediaP = (($nota1*$peso1) + ($nota2*$peso2) + ($nota3*$peso3)) / ($peso1+$peso2+$peso3);
 
-    if ($mediaP > "0" && $mediaP < "7.5" ) {
+    if ($mediaP > "0" && $mediaP < "7,5" ) {
         echo "Reprovado";
     } 
-    elseif ($mediaP >= "7.5" && $mediaP < "9.5") {
+    elseif ($mediaP >= "7,5" && $mediaP < "9,5") {
         echo "Admitido";
     }
-    elseif ($mediaP >= "9.5") {
+    elseif ($mediaP >= "9,5") {
         echo "Dispensado";
     }
 else{
