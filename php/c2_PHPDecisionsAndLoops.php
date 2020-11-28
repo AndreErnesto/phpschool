@@ -271,6 +271,54 @@ echo $maior;
 <!-- Exercício 4-->
 <br> Exercício 4
 <br>
+<form method = "post">   
+Número: <input type="number" name="num">
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<br>
+<?php
+if(isset($_POST['submit']))
+{
+    $num = $_POST['num'];
+    if ($num % 2 == 0) {
+        echo 'Par';
+    }
+    else{
+        echo 'Ímpar';
+    }
+}
+?>
 
+<!-- Exercício 5-->
+<br> Exercício 5
+<br>
+<form method = "post">   
+Ano: <input type="number" name="ano">
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<br>
+<?php
+
+
+if(isset($_POST['submit'])){
+
+    $ano = $_POST['ano'];
+    
+    if ((($ano % 4) == 0) && ((($ano % 100) != 0) || (($ano %400) == 0))) {
+        echo 'Ano Bissexto';
+    }
+    else{
+        echo 'Ano não Bissexto';
+    }
+
+}
+
+
+
+/* function is_leap_year($ano)
+{
+    return ((($ano % 4) == 0) && ((($ano % 100) != 0) || (($ano %400) == 0)));
+} */
+?>
 </body>
 </html>
