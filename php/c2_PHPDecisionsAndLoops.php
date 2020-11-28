@@ -208,6 +208,8 @@ Nota 3: <input type="number" name="nota3">
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
 <br>
+
+
 <?php
 $peso1 = 3;
 $peso2=  4;
@@ -227,6 +229,10 @@ if(isset($_POST['submit'])){
     }
     elseif ($idade >= "9.5") {
         echo "Dispensado";
+    }
+else{
+    echo "Dados inválidos";
+    }
 }
 
 ?>
