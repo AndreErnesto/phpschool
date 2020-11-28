@@ -190,7 +190,58 @@
         echo "Age of ".$y." is : ".$y_value."<br>";
     } 
 ?>
+<br>
+<!-- Exercício 1-->
+<br> Exercício 1
+<br>
+<?php
+$a = [1,2,3,4,5,6,7,8,9,10];
+echo max($a);
+echo '<br>';
+echo min($a);
+echo '<br>';
+echo array_sum($a)/count($a);
+echo '<br>';
+?>
 
+<br>
+<!-- Exercício 2-->
+<br> Exercício 2
+<br>
+<?php
+echo '<b> Saída: </b>';
+echo '<br>';
+$color = array('white', 'green', 'red');
+foreach( $color as $cor ) {
+    echo  $cor. ",";
+ }
+echo '<br>';
+echo '<br>';
+ foreach( $color as $cor2 ) {
+    echo "&#9787". $cor2. "<br>";
+ }
+?>
+
+<!-- Exercício 3-->
+<br> Exercício 3
+<br>
+<?php
+
+$color = array ( 
+"color" => array ( "a" => "Red", "b" => "Green", "c" => "White"),
+"numbers" => array ( 1, 2, 3, 4, 5, 6 ),
+"holes" => array ( "First", 5 => "Second", "Third"));
+echo'<br>';
+echo $color ['holes'][5].'<br>';
+echo $color ['color']['a']. "<br>";
+?>
+
+<!-- Exercício 4-->
+<br> Exercício 4
+<br>
+<?php
+echo rand(0,10);
+?>
 
 </body>
 

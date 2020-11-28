@@ -332,8 +332,40 @@ echo "A voltagem é : " . CalcularVoltagem_part3() . "<br>";
 echo "A resistência é : " . CalcularResistencia_part3() . "<br>";
 echo "A intensidade é : " . CalcularIntensidade_part3() . "<br>";
 ?>
+<br>
+<!-- Exercício 4-->
+<br> Exercício 4
+<br>
+<form method = "post">   
+A: <input type="number" name="A">
+<br><br>
+Ba: <input type="number" name="B">
+<br><br>  
+<input type = "submit" name = "submit" value="Verificar Multiplicidade">
+<br>
+<?php
 
 
+function Verificar(int $A=null, int $B=null){
 
+
+    if(isset($_POST['submit'])){
+        $A = $_POST['A'];
+        $B = $_POST['B'];
+        if ($B%$A ==0) {
+            return $B;
+            echo 'São múltiplos';
+            }
+        elseif($A%$B == 0){
+            return $A;
+            echo 'São múltiplos';
+        }
+        else{
+            echo 'Não é múltiplo';
+        }
+    }
+}
+echo  Verificar() . " é múltiplo <br>";
+?>
 </body>
 </html>
