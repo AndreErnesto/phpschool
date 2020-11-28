@@ -155,11 +155,128 @@
 <!-- Exercício 1-->
 <br> Exercício 1
 <br>
+<form method = "post">   
+Voltagem: <input type="number" name="voltagem">
+<br><br>
+Resistência: <input type="number" name="resistencia">
+<br><br>  
+Intensidade: <input type="number" name="intensidade">
+<br><br>  
+<input type = "submit" name = "submit_voltagem" value="Calcular Voltagem">
+<input type = "submit" name = "submit_resistencia" value="Calcular Resitência">
+<input type = "submit" name = "submit_intensidade" value="Calcular Intensidade">
+<br>
+<?php
 
-    
+function CalcularVoltagem(){
 
+    $V = $_POST["voltagem"];
+    $R = $_POST["resistencia"];
+    $I = $_POST["intensidade"];
 
+    if(isset($_POST['submit_voltagem'])){
 
+        $V = $I * $R;
+        echo 'A voltagem é: ',$V;
+        echo '<br>';
+    }
+}
+
+function CalcularResistencia(){
+
+    $V = $_POST["voltagem"];
+    $R = $_POST["resistencia"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_resistencia'])){
+
+        $R = $V/$I;
+        echo 'A resistência é: ',$R;
+        echo '<br>';
+    }
+}
+
+function CalcularIntensidade(){
+
+    $V = $_POST["voltagem"];
+    $R = $_POST["resistencia"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_intensidade'])){
+
+        $I = $V/$R;
+        echo 'A intensidade é: ',$I;
+        echo '<br>';
+    }
+}
+
+CalcularVoltagem();
+CalcularResistencia();
+CalcularIntensidade();
+
+?>
+<br>
+<!-- Exercício 2-->
+<br> Exercício 2
+<br>
+<form method = "post">   
+Voltagem: <input type="number" name="voltagem">
+<br><br>
+Resistência: <input type="number" name="resistencia">
+<br><br>  
+Intensidade: <input type="number" name="intensidade">
+<br><br>  
+<input type = "submit" name = "submit_voltagem" value="Calcular Voltagem">
+<input type = "submit" name = "submit_resistencia" value="Calcular Resitência">
+<input type = "submit" name = "submit_intensidade" value="Calcular Intensidade">
+<br>
+<?php
+
+function CalcularVoltagem_part2($V=null,$R=null,$I=null){
+
+    $R = $_POST["resistencia"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_voltagem'])){
+
+        $V = $I * $R;
+        echo 'A voltagem é: ',$V;
+        echo '<br>';
+    }
+}
+
+function CalcularResistencia_part2($V=null,$R=null,$I=null){
+
+    $V = $_POST["voltagem"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_resistencia'])){
+        $R=$V/$I;
+        echo 'A resistencia é: ',$R;
+        echo '<br>';
+    }
+}
+
+function CalcularIntensidade_part2($V=null,$R=null,$I=null){
+
+    $V = $_POST["voltagem"];
+    $R = $_POST["resistencia"];
+
+    if(isset($_POST['submit_intensidade'])){
+        $I=$V/$R;
+        echo 'A Intensidade é: ',$I;
+        echo '<br>';
+    }
+}
+
+CalcularVoltagem_part2($V=NULL,$R=null,$I=null);
+CalcularResistencia_part2($V=NULL,$R=null,$I=null);
+CalcularIntensidade_part2($V=NULL,$R=null,$I=null);
+?>
+<br>
+<!-- Exercício 3-->
+<br> Exercício 3
+<br>
 
 </body>
 </html>
