@@ -148,6 +148,14 @@
     echo addNumbers2(1.2, 5.2);
     ?>
 
+
+
+<br>
+
+<!-- Exercício 1-->
+<br> Exercício 1
+<br>
+
     
 
 

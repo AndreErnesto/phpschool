@@ -303,22 +303,61 @@ Ano: <input type="number" name="ano">
 if(isset($_POST['submit'])){
 
     $ano = $_POST['ano'];
-    
+
     if ((($ano % 4) == 0) && ((($ano % 100) != 0) || (($ano %400) == 0))) {
         echo 'Ano Bissexto';
     }
     else{
         echo 'Ano não Bissexto';
     }
-
 }
-
-
-
-/* function is_leap_year($ano)
-{
-    return ((($ano % 4) == 0) && ((($ano % 100) != 0) || (($ano %400) == 0)));
-} */
 ?>
+<br>
+
+<!-- Exercício 6-->
+<br> Exercício 6
+<br>
+<form method = "post">   
+Dia da semana: <input type="number" name="dia">
+<br><br>  
+<input type = "submit" name = "submit" value="Calcular">
+<br>
+<?php
+if(isset($_POST['submit'])){
+
+    $dia = $_POST['dia'];
+
+    switch ($dia) {
+    case "1":{
+        echo "Domingo";
+        break;
+        }
+    case "2":
+        echo "Segunda-feira";
+        break;
+    case "3":
+        echo "Terça-feira";
+        break;
+    case "4":
+        echo "Quarta-feira";
+        break;
+    case "5":
+         echo "Quinta-feira";
+        break;
+    case "6":
+        echo "Sexta-feira";
+        break;
+    case "7":
+         echo "Sábado";
+         break;
+
+    default:
+        echo "Dia da semana inválido";
+    }
+    echo "<br>";
+}
+    ?>
+
+
 </body>
 </html>
