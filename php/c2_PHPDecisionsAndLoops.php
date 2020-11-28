@@ -214,13 +214,14 @@ Nota 3: <input type="number" name="nota3">
 $peso1 = 3;
 $peso2=  4;
 $peso3=  5;
-if(isset($_POST['submit'])){
+   
+    if(isset($_POST['submit']))
+{
     $nota1 = $_POST['nota1'];
     $nota2 = $_POST['nota2'];
     $nota3 = $_POST['nota3'];
     $mediaP = (($nota1*$peso1) + ($nota2*$peso2) + ($nota3*$peso3)) / ($peso1+$peso2+$peso3);
-    if(isset($_POST['submit']))
-{
+
     if ($mediaP > "0" && $mediaP < "7.5" ) {
         echo "Reprovado";
     } 
@@ -234,9 +235,7 @@ else{
     echo "Dados inválidos";
     }
 }
-
 ?>
-
 
 </body>
 </html>
