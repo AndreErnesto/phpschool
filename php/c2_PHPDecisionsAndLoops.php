@@ -252,15 +252,18 @@ Número 3: <input type="number" name="numero3">
 <br><br>  
 <input type = "submit" name = "submit" value="Calcular">
 <br>
+
+
 <?php
 
-$numero1 = $_POST['numero1'];
-$numero2 = $_POST['numero2'];
-$numero3 = $_POST['numero3'];
+$num1 = $_POST['num1'];
+$num2 = $_POST['num2'];
+$num3 = $_POST['num3'];
+$highest_number = max($num1, $num2, $num3);
 
 if(isset($_POST['submit']))
 {
-echo(max($numero1,$numero2,$numero3));
+echo $highest_number;
 }
 ?>
 
