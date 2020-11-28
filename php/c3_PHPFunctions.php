@@ -277,6 +277,63 @@ CalcularIntensidade_part2($V=NULL,$R=null,$I=null);
 <!-- Exercício 3-->
 <br> Exercício 3
 <br>
+<form method = "post">   
+Voltagem: <input type="number" name="voltagem">
+<br><br>
+Resistência: <input type="number" name="resistencia">
+<br><br>  
+Intensidade: <input type="number" name="intensidade">
+<br><br>  
+<input type = "submit" name = "submit_voltagem" value="Calcular Voltagem">
+<input type = "submit" name = "submit_resistencia" value="Calcular Resitência">
+<input type = "submit" name = "submit_intensidade" value="Calcular Intensidade">
+<br>
+<?php
+
+function CalcularVoltagem_part3($V=null,$R=null,$I=null){
+
+    $R = $_POST["resistencia"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_voltagem'])){
+
+        $V = $I * $R;
+       return $V;
+    }
+}
+
+function CalcularResistencia_part3($V=null,$R=null,$I=null){
+
+    $V = $_POST["voltagem"];
+    $I = $_POST["intensidade"];
+
+    if(isset($_POST['submit_resistencia'])){
+
+        $R =  $V/$I;
+       return $R;
+    }
+}
+
+function CalcularIntensidade_part3($V=null,$R=null,$I=null){
+
+    $V = $_POST["voltagem"];  
+    $R = $_POST["resistencia"];
+
+    if(isset($_POST['submit_intensidade'])){
+
+        $I =$V/$R;
+       return $I;
+    }
+}
+
+
+/* echo CalcularVoltagem_part3("A voltagem é: ",$V,"<br>"); */
+echo "A voltagem é : " . CalcularVoltagem_part3() . "<br>";
+echo "A resistência é : " . CalcularResistencia_part3() . "<br>";
+echo "A intensidade é : " . CalcularIntensidade_part3() . "<br>";
+?>
+
+
 
 </body>
 </html>
