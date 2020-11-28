@@ -221,13 +221,13 @@ if(isset($_POST['submit'])){
     $mediaP = (($nota1*$peso1) + ($nota2*$peso2) + ($nota3*$peso3)) / ($peso1+$peso2+$peso3);
     if(isset($_POST['submit']))
 {
-    if ($mediaP > "0" && $idade < "7.5" ) {
+    if ($mediaP > "0" && $mediaP < "7.5" ) {
         echo "Reprovado";
     } 
-    elseif ($idade >= "7.5" && $idade < "9.5") {
+    elseif ($mediaP >= "7.5" && $mediaP < "9.5") {
         echo "Admitido";
     }
-    elseif ($idade >= "9.5") {
+    elseif ($mediaP >= "9.5") {
         echo "Dispensado";
     }
 else{
