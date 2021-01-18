@@ -16,6 +16,7 @@
 
 <ul>
     <li><a href="challenge1/Challenge1.php">Challenge 1 </a>
+    <li><a href="challenge02/Challenge02.php">Challenge 2 </a>
     <li><a href="php/c1_PHPLanguageBasics.php">PHP Language Basics</a></li>
     <li><a href="php/c2_PHPDecisionsAndLoops.php">Decisions and Loops</a></li>
     <li><a href="php/c3_PHPFunctions.php">Functions</a></li>
