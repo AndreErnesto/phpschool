@@ -27,6 +27,20 @@ function getOptions($Array) {
    return $option;
 }
 ?>
+<!-- Protects the form, so that it is mandatory to introduce and validate the fields: -->
+<!-- Title, Genre, Subject and Year --
+<!-- 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ if (empty($_POST["name"])) {
+ $nameErr = "Name is required";
+} else {
+ $name = test_input($_POST["name"]);
+ // check if name only contains letters and whitespace
+ if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+ $nameErr = "Only letters and white space allowed";
+ }
+} -->
+
 
 
 <main>
