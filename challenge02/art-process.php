@@ -29,6 +29,7 @@
                     $titleErro = "Only letters and white space allowed";
                 }
         }
+      }
         function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
