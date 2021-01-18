@@ -8,14 +8,14 @@ include("./rainbowIterator.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Challenge 01</title>
 
     <style>
         span {
-            height: 25px;
-            width: 25px;
+            height: 30px;
+            width: 30px;
             margin: 0 2px;
-            border: 1px solid black;
+            border: 2px solid black;
             display: inline-block;
         }
     
