@@ -15,7 +15,7 @@
 <h1>Part II - Learning the language</h1>
 
 <ul>
-    <li><a href="challenge1/hello.php">Challenge 1 </a>
+    <li><a href="challenge1/Challenge1.php">Challenge 1 </a>
     <li><a href="php/c1_PHPLanguageBasics.php">PHP Language Basics</a></li>
     <li><a href="php/c2_PHPDecisionsAndLoops.php">Decisions and Loops</a></li>
     <li><a href="php/c3_PHPFunctions.php">Functions</a></li>
