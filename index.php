@@ -23,6 +23,7 @@
     <li><a href="php/c4_PHPArrays.php">Arrays</a></li>
     <li><a href="php/c5_PHPSuperglobals.php">Super Globals </a></li>
     <li><a href="php/c11_PHPFormHandling.php">Form Handling </a></li>
+    li><a href="php/c12_PHPFormValidation.php">Form Validation </a></li>
     <li><a href="#">Functions</a></li>
     <li><a href="#">Objects</a></li>
 </ul>
