@@ -53,9 +53,9 @@
 <h2>Exercício 2 </h2>
     <h1>Reservation Request</h1>
     <h2>General Information</h2><br>
-        <form method="post">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Arrival Date: <input type="date" name="Arrival"><br>
-            <span class="error"> * <?php echo $ArrivalDateErro ?></span>
+            <span class="error"> * <?php echo $ArrivalDateErro ?></span><br>
             Nights: <input type="text" name="Nights"><br>
             Adults:<input type="number" name="Adults"><br>
             Children: <input type="number" name="Children"><br>
