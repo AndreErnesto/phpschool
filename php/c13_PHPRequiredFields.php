@@ -10,9 +10,26 @@
             <?php
         // define variables and set to empty values
         $ArrivalDate = $Nights = $Adults = $Children = $RoomType = $BedType = 
-        $nome = $email = $phone = "";   
+        $nome = $email = $phone = "";
+        
+        
+  /*        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ if (empty($_POST["name"])) {
+ $nameErr = "Name is required";
+} else {
+ $name = test_input($_POST["name"]);
+}
+ if (empty($_POST["email"])) {
+ $emailErr = "Email is required";
+} else {
+ $email = test_input($_POST["email"]);
+}  */
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $ArrivalDate = test_input($_POST['Arrival']);
+            if(empty($_POST['Arrival'])){
+                $ArrivalDateErro = "Arrival Date is Invalid";
+            }else{
+                $ArrivalDate = test_input($_POST['Arrival']);
+            }
             $Nights =test_input( $_POST['Nights']);
             $Adults = test_input($_POST['Adults']);
             $Children = test_input($_POST['Children']);
@@ -38,6 +55,7 @@
     <h2>General Information</h2><br>
         <form method="post">
             Arrival Date: <input type="date" name="Arrival"><br>
+            <span class="error"> * <?php echo $ArrivalDateErro ?></span>
             Nights: <input type="text" name="Nights"><br>
             Adults:<input type="number" name="Adults"><br>
             Children: <input type="number" name="Children"><br>
