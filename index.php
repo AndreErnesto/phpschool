@@ -55,13 +55,13 @@
         <li><a href="/php/c41_PHPOpenCloseConnection2.php">Open Connection 2</a></li>
         <li><a href="/php/c42_PHPreadRecordWithPHP.php">Read a record with PHP</a></li>
         <li><a href="/php/c43_PHPAddRecord.php">Add a record to a MySQL database</a></li>
-        <li><a href="/php/testPrep.php">Prepared Statements</a></li>
-        <li><a href="/php/testPrep2.php">INSERT with Prepared Statements</a></li>
-        <li><a href="/php/testPrep3.php">UPDATE with Prepared Statements</a></li>
-        <li><a href="/php/testPrep4.php">DELETE with Prepared Statements</a></li>
+        <li><a href="php/testPrep.php">Prepared Statements</a></li>
+        <li><a href="php/testPrep2.php">INSERT with Prepared Statements</a></li>
+        <li><a href="php/testPrep3.php">UPDATE with Prepared Statements</a></li>
+        <li><a href="php/testPrep4.php">DELETE with Prepared Statements</a></li>
 
-        <li><a href="/login/signup.php">Sign up</a></li>
-        <li><a href="/login/login.php">login</a></li>
+        <li><a href="login/signup.php">Sign up</a></li>
+        <li><a href="login/login.php">login</a></li>
         
     </ul>
 
