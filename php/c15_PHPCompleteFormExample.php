@@ -6,15 +6,7 @@
 </head>
 
     <body>
- <!-- if (empty($_POST["email"])) {
- $emailErr = "Email is required";
-} else {
- $email = test_input($_POST["email"]);
- // check if e-mail address is well-formed
- if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
- $emailErr = "Invalid email format";
- }
-} -->
+
             <?php
         // define variables and set to empty values
         $ArrivalDate = $Nights = $Adults = $Children = $RoomType = $BedType = 
@@ -68,13 +60,29 @@
             Children: <input type="number" name="Children"><br>
             <br>
 
+<!-- <input type="radio" name="gender" 
+<?php if (isset($gender) && $gender=="female") echo "checked";?>
+value="female">Female -->
+
     <h2>Preferences</h2>
-            Room type: <input type="radio" name="Roomtype" value="Standard">
+            Room type: <input type="radio" name="Roomtype"
+                       <?php if(isset($RoomType) && $RoomType=="Standard") echo"Checked"; ?>
+                        value="Standard">
                        <label for="Standard">Standard</label>
-                       <input type="radio" name="Roomtype" value="Business">
+
+
+                       <input type="radio" name="Roomtype"
+                       <?php if(isset($RoomType) && $RoomType=="Business") echo"Checked"; ?>
+                        value="Business">
                        <label for="Business">Business</label>
-                       <input type="radio" name="Roomtype" value="Suite">
+
+
+                       <input type="radio" name="Roomtype"
+                       <?php if(isset($RoomType) && $RoomType=="Suite") echo"Checked"; ?>
+                        value="Business">
                        <label for="Suite">Suite</label><br>
+
+
             Bed type:  <input type="checkbox"  name="BedType" value="King">
                         <label for="King">King</label>
                         <input type="checkbox"  name="BedType" value="Double_Double">

@@ -43,7 +43,7 @@
         <li><a href="php/c13_PHPRequiredFields.php">PHP Forms - Required Fields</a></li>
         <li><a href="php/c14_PHPValidateEmail_URL.php">PHP Forms - Validate E-mail and URL</a></li>
         <li><a href="php/c15_PHPCompleteFormExample.php">PHP Complete Form Example</a></li>
-        <li><a href="/auxStuff/challenge02/challenge02.php">Challenge02</a></li>
+        <li><a href="challenge02/challenge02.php">Challenge02</a></li>
     </ul>
 
     <br>
