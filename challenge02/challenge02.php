@@ -27,29 +27,36 @@ function getOptions($Array) {
    return $option;
 }
 ?>
-<!-- Protects the form, so that it is mandatory to introduce and validate the fields: -->
-<!-- Title, Genre, Subject and Year --
-<!-- 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
- if (empty($_POST["name"])) {
- $nameErr = "Name is required";
-} else {
- $name = test_input($_POST["name"]);
- // check if name only contains letters and whitespace
- if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
- $nameErr = "Only letters and white space allowed";
- }
-} -->
 
+<?php
+            $titleErr = "";
+            $title= "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "GET") {
+                if (empty($_GET["title"])) {
+                  $titleErr = "Title is required";
+                } else {
+                  $title = test_input($_POST["title"]);
+                }
+            }
+                function test_input($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                  }
+
+            ?>
 
 
 <main>
-    <!-- Por method post e ação para art-process.php -->
-    <form class="form" id="mainForm" action="art-process.php" method="post">
+    <!-- Por method post e ação para art-process.php -->"art-process.php"
+    <form class="form" id="mainForm" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="get">
         <fieldset class="form__panel">
             <legend class="form__heading">Edit Art Work Details</legend>
                 <p class="form__row">
                     <label>Title</label><br/>
+                    <span class="error">* <?php echo $titleErr;?></span>
                     <input type="text" name="title" class="form__input form__input--large"/>
                 </p>
 

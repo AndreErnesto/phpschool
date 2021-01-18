@@ -15,31 +15,7 @@
   <body>
     <?php include 'header.inc.php'; ?>
 
-    <?php
-        // define variables and set to empty values
-
-        $tile = "";
-
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            if(empty($_POST['title'])){
-                $titleErr = "Title is required";
-            }else{
-                $title = test_input($_POST['title']);
-                if(!preg_match("/^[a-zA-Z-' ]*$/",$title)){
-                    $titleErro = "Only letters and white space allowed";
-                }
-        }
-      }
-        function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-        }
-
-      ?>
-
-
+            
 
     <main>
       <section class="results">
@@ -50,7 +26,6 @@
             <!-- Title validation -->
               <td class="results__label">Title</td>
               <td class="results__value"><?php echo $_POST['title']; ?></td>
-              <span class="error"> * <?php echo $titleErro ?></span><br>
             </tr>
             
 
