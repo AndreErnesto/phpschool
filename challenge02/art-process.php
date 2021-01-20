@@ -17,15 +17,43 @@
 
     <?php
            /*  $titleErr = ""; */
-            $title= "";
+            /* $title="" ; */
+
+             
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (empty($_GET["title"])) {
+                if (empty($_POST["title"])) {
                   header('Location: challenge02.php');
                 } else {
                   $title = test_input($_POST["title"]);
                 }
+            } 
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              if (empty($_POST["genre"])) {
+                header('Location: challenge02.php');
+              } else {
+                $title = test_input($_POST["genre"]);
+              }
+          }
+
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["subject"])) {
+              header('Location: challenge02.php');
+            } else {
+              $title = test_input($_POST["subject"]);
             }
+        } 
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          if (empty($_POST["year"])) {
+            header('Location: challenge02.php');
+          } else {
+            $title = test_input($_POST["year"]);
+          }
+      } 
+
+
                 function test_input($data) {
                     $data = trim($data);
                     $data = stripslashes($data);

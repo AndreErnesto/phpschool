@@ -3,21 +3,23 @@
 require_once('config.php'); 
 
 /*
-Displays a single genre
+Displays a list of genres
 */
-function outputSingleGenre($row) {
-   echo '<div class="ui fluid card">';
-   echo '<div class="ui fluid image">';
-   $img = '<img src="images/art/genres/square-medium/' .
-   $row['GenreId'] .'.jpg">';
-   echo constructGenreLink($row['GenreId'], $img);
-   echo '</div>';
-   echo '<div class="extra">';
-   echo '<h4>';
-   echo constructGenreLink($row['GenreId'], $row['GenreName']);
-   echo '</h4>';
-   echo '</div>'; // end class=extra
-   echo '</div>'; // end class=card
+function outputGenres() {
+   try {
+   $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   $sql = 'select GenreId, GenreName, Description from Genres
+   Order By GenreID';
+   $result = $pdo->query($sql);
+   while ($row = $result->fetch()) {
+   outputSingleGenre($row);
+   }
+   $pdo = null;
+   }
+   catch (PDOException $e) {
+   die( $e->getMessage() );
+   }
    } 
 
 /*

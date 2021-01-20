@@ -32,7 +32,7 @@ function getOptions($Array) {
 
 <main>
     <!-- Por method post e ação para art-process.php -->
-    <form class="form" id="mainForm" action="art-process.php" method="post">
+    <form class="form" id="mainForm" action="art-process.php" method="POST">
         <fieldset class="form__panel">
             <legend class="form__heading">Edit Art Work Details</legend>
                 <p class="form__row">
@@ -46,18 +46,18 @@ function getOptions($Array) {
                     </p>
 
                 <p class="form__row">
-                    <label>Genre</label><br/>
+                    <label>Choose Genre</label><br/>
                     <select name="genre" class="form__input form__select">
-                    <option>Choose genre</option>
+                    <option></option>
                     <!-- echo das opções da array list  -->
                         <?php echo getOptions($genres); ?>
                     </select>
                 </p>
 
                 <p class="form__row">
-                    <label>Subject</label><br/>
+                    <label>Choose Subject</label><br/>
                     <select name="subject" class="form__input form__select">
-                    <option>Choose subject</option>
+                    <option></option>
                        <!-- echo das opções da array list  -->
                         <?php echo getOptions($subjects); ?>
                     </select>
