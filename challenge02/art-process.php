@@ -15,6 +15,24 @@
   <body>
     <?php include 'header.inc.php'; ?>
 
+    <?php
+           /*  $titleErr = ""; */
+            $title= "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_GET["title"])) {
+                  header('Location: challenge02.php');
+                } else {
+                  $title = test_input($_POST["title"]);
+                }
+            }
+                function test_input($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                  }
+            ?>
             
 
     <main>
@@ -24,8 +42,10 @@
           <caption class="results__caption">Art Work Saved</caption>
             <tr>
             <!-- Title validation -->
+             
               <td class="results__label">Title</td>
               <td class="results__value"><?php echo $_POST['title']; ?></td>
+              
             </tr>
             
 

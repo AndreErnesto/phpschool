@@ -28,35 +28,15 @@ function getOptions($Array) {
 }
 ?>
 
-<?php
-            $titleErr = "";
-            $title= "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "GET") {
-                if (empty($_GET["title"])) {
-                  $titleErr = "Title is required";
-                } else {
-                  $title = test_input($_POST["title"]);
-                }
-            }
-                function test_input($data) {
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                  }
-
-            ?>
 
 
 <main>
-    <!-- Por method post e ação para art-process.php -->"art-process.php"
-    <form class="form" id="mainForm" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> method="get">
+    <!-- Por method post e ação para art-process.php -->
+    <form class="form" id="mainForm" action="art-process.php" method="post">
         <fieldset class="form__panel">
             <legend class="form__heading">Edit Art Work Details</legend>
                 <p class="form__row">
                     <label>Title</label><br/>
-                    <span class="error">* <?php echo $titleErr;?></span>
                     <input type="text" name="title" class="form__input form__input--large"/>
                 </p>
 
