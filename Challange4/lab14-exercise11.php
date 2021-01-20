@@ -95,27 +95,5 @@ function outputSinglePainting($row) {
       </div>
    </main>
 
-<script>
-function outputPaintings() {
-try {
-if (isset($_GET['id']) && $_GET['id'] > 0) {
-$pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = 'select * from Paintings where ArtistId=:id';
-$id = $_GET['id'];
-$statement = $pdo->prepare($sql);
-$statement->bindValue(':id', $id);
-$statement->execute();
-while ($row = $statement->fetch()) {
-outputSinglePainting($row);
-}
-$pdo = null;
-}
-}
-catch (PDOException $e) {
-die( $e->getMessage() );
-}
-} 
-</script>
 </body>
 </html>
