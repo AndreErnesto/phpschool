@@ -44,7 +44,7 @@ function outputSingleGenre($row) {
 /*
 Constructs a link given the genre id and a label (which could
 be a name or even an image tag
-*/
+*/    
 function constructGenreLink($id, $label) {
    $link = '<a href="genre.php?id=' . $id . '">';
    $link .= $label;
