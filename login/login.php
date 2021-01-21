@@ -20,12 +20,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$SQL->bind_param('s', $uname);
 	$SQL->execute();
 	$result = $SQL->get_result();
+/* Verificar se os resultados são únicos */
 
 		if ($result->num_rows == 1) {
 
+
 			$db_field = $result->fetch_assoc();
 
+			/* Verificar o field L2 das passwords */
+
 			if (password_verify($pword, $db_field['L2'])) {
+
+				/* Se existir dá session_start header page1.php */
+
 				session_start();
 				$_SESSION['login'] = "1";
 				header ("Location: page1.php");
