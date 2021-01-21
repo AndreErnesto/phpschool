@@ -1,5 +1,6 @@
 <?php 
 
+/* Conectar com DB */
 require_once('config.php'); 
 try {
    $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
@@ -28,6 +29,8 @@ catch (PDOException $e) {
             <option value="0">Select a gallery</option>
             
             <?php
+
+            /* Selecionar tudo das galerias ordenadas pelo nome */
    
             $sql = 'select * from Galleries order by GalleryName';
             $result = $pdo->query($sql);
@@ -51,6 +54,7 @@ catch (PDOException $e) {
 <div class="ui six cards">
              <?php
             // only display painting cards if one has been selected
+            /* Apenas mostra resultados se for feito o request GET e existir o resultado na galeria */
                if ($_SERVER["REQUEST_METHOD"] == "GET") {
                   if (isset($_GET['gallery']) && $_GET['gallery'] > 0) {
                      $sql = 'select * from Paintings where GalleryId=' .

@@ -47,7 +47,7 @@ function outputPaintings() {
    }
 
 /*
-Displays a single painting
+Displays a single painting /// Display da pintura 
 */
 function outputSinglePainting($row) {
    echo '<div class="item">';
