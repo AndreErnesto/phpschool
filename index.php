@@ -62,7 +62,11 @@
 
         <li><a href="login/signup.php">Sign up</a></li>
         <li><a href="login/login.php">login</a></li>
-        <li><a href="challange4/lab14-exercise12.php">Challenge4</a></li>
+        <li><a href="challange4/lab14-exercise08-pdo.php">Challenge4 - 1 </a></li>
+        <li><a href="challange4/lab14-exercise09.php">Challenge4 - 2 </a></li>
+        <li><a href="challange4/lab14-exercise10.php">Challenge4 - 3 </a></li>
+        <li><a href="challange4/lab14-exercise11.php">Challenge4 - 4 </a></li>
+        <li><a href="challange4/lab14-exercise12.php">Challenge4 - 5 </a></li>
     </ul>
 
 
